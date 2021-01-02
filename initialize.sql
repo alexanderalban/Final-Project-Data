@@ -15,7 +15,7 @@ CREATE TABLE userHighScore (
     fastestTime INT NOT NULL,
     todayTime INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id),
+    FOREIGN KEY (user_id)
     REFERENCES users (id)
 );
 
@@ -24,7 +24,7 @@ CREATE TABLE user2FA (
     user_id INT NOT NULL,
     has2FA BOOLEAN NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id),
+    FOREIGN KEY (user_id)
     REFERENCES users (id)
 );
 
@@ -35,7 +35,7 @@ CREATE TABLE userDailyStreak (
     currentStreak INT NOT NULL,
     previousStreak INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id),
+    FOREIGN KEY (user_id)
     REFERENCES users (id)
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE userLevelsComplete (
     user_id INT NOT NULL,
     levelsComplete INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id),
+    FOREIGN KEY (user_id)
     REFERENCES users (id)
 );
 
@@ -69,8 +69,8 @@ CREATE TABLE userCharacter (
     user_helmet VARCHAR(50) NOT NULL,
     user_jumpsuit VARCHAR(50) NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_helmet),
+    FOREIGN KEY (user_helmet)
     REFERENCES characterHelmets (helmetName),
-    FOREIGN KEY (user_jumpsuit),
+    FOREIGN KEY (user_jumpsuit)
     REFERENCES characterJumpSuits (jumpSuitName)
 );
