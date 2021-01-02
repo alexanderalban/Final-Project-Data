@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users, userHighScore, user2FA, userDailyStreak, userLevelsComplete, userCharacter, characterHelmets, characterJumpSuits
+DROP TABLE IF EXISTS users, userHighScore, user2FA, userDailyStreak, userLevelsComplete, userCharacter, characterHelmets, characterJumpSuits;
 
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
