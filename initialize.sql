@@ -66,9 +66,11 @@ CREATE TABLE characterJumpSuits (
 CREATE TABLE userCharacter (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
-    user_helmet VARCHAR(50) NOT NULL,
-    user_jumpsuit VARCHAR(50) NOT NULL,
+    user_helmet INT NOT NULL,
+    user_jumpsuit INT NOT NULL,
     PRIMARY KEY (id),
+    FOREIGN KEY (user_id)
+    REFERENCES users (id),
     FOREIGN KEY (user_helmet)
     REFERENCES characterHelmets (id),
     FOREIGN KEY (user_jumpsuit)
