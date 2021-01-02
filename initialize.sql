@@ -70,7 +70,7 @@ CREATE TABLE userCharacter (
     user_jumpsuit VARCHAR(50) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_helmet)
-    REFERENCES characterHelmets (helmetName),
+    REFERENCES characterHelmets (id),
     FOREIGN KEY (user_jumpsuit)
-    REFERENCES characterJumpSuits (jumpSuitName)
+    REFERENCES characterJumpSuits (id)
 );
